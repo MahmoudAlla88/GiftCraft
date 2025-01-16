@@ -85,7 +85,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <button type="submit" id="sub" >register</button>
+           <button type="submit" id="sub" >register</button>
             </div>
             <div class="two-col">
                 <div class="one">
@@ -250,14 +250,23 @@
         y.style.right = "5px";
         x.style.opacity = 0;
         y.style.opacity = 1;
+
+
+
+ 
     }
 </script>
 
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            onAuthStateChanged,
+            signOut
+         } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -271,16 +280,113 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-   
-  const Firstname=document.getElementById("Firstname").value;
-  const Lastname=document.getElementById("Lastname").value;
-  const Email=document.getElementById("Email").value;
-  const Password=document.getElementById("Password").value;
-  const sub=document.getElementById("sub").value;
-sub.addEventListener("click",function(e){
-e.preventDefault()
-alert(s)
-})
+
+  // Initialize Firebase Authentication
+  const auth = getAuth(app);
+
+  // Select the "register" button
+  const sub = document.getElementById("sub");
+
+  // Add event listener for the "register" button
+  sub.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Get input values
+    const Firstname = document.getElementById("Firstname").value;
+    const Lastname = document.getElementById("Lastname").value;
+    const Email = document.getElementById("Email").value;
+    const Password = document.getElementById("Password").value;
+
+    // Validate input fields
+    if (!Firstname || !Lastname || !Email || !Password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Create a new user with email and password
+    createUserWithEmailAndPassword(auth, Email, Password)
+      .then((userCredential) => {
+        // User successfully created
+        const user = userCredential.user;
+        console.log("User created:", user);
+        alert("Account created successfully!");
+      })
+      .catch((error) => {
+        // Handle errors
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(`Error [${errorCode}]: ${errorMessage}`);
+        alert(errorMessage);
+      });
+  });
+
+
+
+// const submit = document.getElementById("submit");
+
+//   // Add event listener for the "register" button
+//   submit.addEventListener("click", function (e) {
+//     e.preventDefault();
+
+//     // Get input values
+//     const userEmail = document.getElementById("userEmail").value;
+//     const userPassworde = document.getElementById("userPassword").value;
+ 
+ 
+//    if (!userEmail || !userPassword ) {
+//       alert("Please fill in all fields.");
+//       return;
+//     }
+//    const userSignIn = async() => {
+            
+//             signInWithEmailAndPassword(auth,userEmail ,userPassworde )
+//             .then((userCredential) => {
+//                 const user = userCredential.user;
+//                 alert("You have signed in successfully!");
+//             })
+//             .catch((error) => {
+//                 const errorCode = error.code;
+//                 const errorMessage = error.message;
+//                 console.log(errorCode + errorMessage)
+//             })
+//         }
+//      })
+const auth1 = getAuth(); // تأكد من تهيئة Firebase بشكل صحيح
+
+const submit = document.getElementById("submit");
+
+// Add event listener for the "login" button
+submit.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Get input values
+  const userEmail = document.getElementById("userEmail").value;
+  const userPassword = document.getElementById("userPassword").value;
+
+  // Check if fields are empty
+  if (!userEmail || !userPassword) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  // Sign in the user
+  const userSignIn = async () => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth1, userEmail, userPassword);
+      const user = userCredential.user;
+      alert("You have signed in successfully!");
+      console.log("User signed in:", user);
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error(`Error: ${errorCode}, ${errorMessage}`);
+      alert(`Login failed: ${errorMessage}`);
+    }
+  };
+
+  userSignIn(); // Call the function to sign in the user
+});
+</script>
 </script>
 
 <!-- <script type="module">
