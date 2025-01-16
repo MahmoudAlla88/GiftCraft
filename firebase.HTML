@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="card">
+        <h3>frame</h3>
+        <input type="url" placeholder="image" id="image">
+        <input type="text" placeholder="title" id="title">
+        <input type="number" placeholder="price" id="price">
+        <button id="submit">subimt</button>
+        <h3>bock decoration</h3>
+    </form>
+    
+    <div id="containerCard">
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import {
+            getFirestore,
+            addDoc,
+            collection,
+            getDocs,
+            deleteDoc,
+            doc,
+            getDoc,
+            updateDoc
+        } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyADpIPsj1xK_9L7t8XMFB_CGQN0RBzqDiM",
+            authDomain: "gift-shop-779d5.firebaseapp.com",
+            projectId: "gift-shop-779d5",
+            storageBucket: "gift-shop-779d5.firebasestorage.app",
+            messagingSenderId: "1046929050162",
+            appId: "1:1046929050162:web:48582f43a2a466c7c78a2b"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+
+        //add data to fire store 
+        async function addData(e) {
+            e.preventDefault();
+            let image = document.getElementById("image").value;
+            let title = document.getElementById("title").value;
+            let price = document.getElementById("price").value;
+            try {
+                const addData = await addDoc(collection(db, "giftProduct"), {
+                    imageProduct: image,
+                    titleProduct: title,
+                    priceProduct: price
+                })
+                alert("data added!")
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        const submitBtn = document.getElementById("submit");
+        submitBtn.addEventListener("click", addData);
+        //*******************************************************************************
+
+        //display data 
+        async function displayData() {
+            try {
+                const getData = await getDocs(collection(db, "giftProduct"));
+                let htmlTag = ""
+                getData.forEach((doc) => {
+                    const giftData = doc.data();
+                //     htmlTag += `
+                // <div>
+                // <img src="${giftData.imageProduct}" alt="" height="150" width="150">
+                // <h2>${giftData.titleProduct}</h2>
+                // <p>${giftData.priceProduct}</p>
+                // </div>
+                
+                // `
+                })
+                // const containerCard = document.getElementById("containerCard");
+                // containerCard.innerHTML = htmlTag;
+
+            } catch (error) {
+                console.log(error);
+            }
+        } 
+        displayData();
+
+    </script>
+
+
+</body>
+
+</html>

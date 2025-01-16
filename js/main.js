@@ -34,10 +34,17 @@
     /*------------------
         Background Set
     --------------------*/
-    $('.set-bg').each(function () {
-        var bg = $(this).data('setbg');
-        $(this).css('background-image', 'url(' + bg + ')');
+
+    document.querySelectorAll('.set-bg').forEach(function (element) {
+        // الحصول على قيمة data-setbg
+        var bg = element.getAttribute('data-setbg');
+        // تعيين الخلفية باستخدام CSS
+        element.style.backgroundImage = 'url(' + bg + ')';
     });
+    // $('.set-bg').each(function () {
+    //     var bg = $(this).data('setbg');
+    //     $(this).css('background-image', 'url(' + bg + ')');
+    // });
 
     //Search Switch
     $('.search-switch').on('click', function () {
