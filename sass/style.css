@@ -727,7 +727,9 @@ ol {
   text-align: center;
   position: relative;
 }
-.categories__deal__countdown .categories__deal__countdown__timer .cd-item:after {
+.categories__deal__countdown
+  .categories__deal__countdown__timer
+  .cd-item:after {
   position: absolute;
   right: 0;
   top: 7px;
@@ -736,7 +738,9 @@ ol {
   font-weight: 700;
   color: #3d3d3d;
 }
-.categories__deal__countdown .categories__deal__countdown__timer .cd-item:last-child:after {
+.categories__deal__countdown
+  .categories__deal__countdown__timer
+  .cd-item:last-child:after {
   display: none;
 }
 .categories__deal__countdown .categories__deal__countdown__timer .cd-item span {
@@ -1046,19 +1050,27 @@ ol {
   display: block;
 }
 
-.shop__sidebar__categories ul, .shop__sidebar__price ul, .shop__sidebar__brand ul {
+.shop__sidebar__categories ul,
+.shop__sidebar__price ul,
+.shop__sidebar__brand ul {
   height: 225px;
 }
-.shop__sidebar__categories ul li, .shop__sidebar__price ul li, .shop__sidebar__brand ul li {
+.shop__sidebar__categories ul li,
+.shop__sidebar__price ul li,
+.shop__sidebar__brand ul li {
   list-style: none;
 }
-.shop__sidebar__categories ul li a, .shop__sidebar__price ul li a, .shop__sidebar__brand ul li a {
+.shop__sidebar__categories ul li a,
+.shop__sidebar__price ul li a,
+.shop__sidebar__brand ul li a {
   color: #b7b7b7;
   font-size: 15px;
   line-height: 32px;
   transition: all, 0.3s;
 }
-.shop__sidebar__categories ul li a:hover, .shop__sidebar__price ul li a:hover, .shop__sidebar__brand ul li a:hover {
+.shop__sidebar__categories ul li a:hover,
+.shop__sidebar__price ul li a:hover,
+.shop__sidebar__brand ul li a:hover {
   color: #111111;
 }
 
@@ -1171,7 +1183,9 @@ ol {
 }
 
 .shop__sidebar__accordion .card-heading a:after,
-.shop__sidebar__accordion .card-heading > a.active[aria-expanded=false]:after {
+.shop__sidebar__accordion
+  .card-heading
+  > a.active[aria-expanded="false"]:after {
   content: "\f107";
   font-family: "FontAwesome";
   font-size: 24px;
@@ -1307,7 +1321,8 @@ ol {
   display: inline-block;
   text-align: center;
 }
-.product__details__pic .nav-tabs .nav-item.show .nav-link, .product__details__pic .nav-tabs .nav-link.active {
+.product__details__pic .nav-tabs .nav-item.show .nav-link,
+.product__details__pic .nav-tabs .nav-link.active {
   background-color: transparent;
   border-color: transparent;
 }
@@ -1650,7 +1665,7 @@ ol {
 .footer__about {
   margin-bottom: 30px;
 }
-.footer__about .footer__logo {
+.footer__about .footer__logo img {
   margin-bottom: 30px;
 }
 .footer__about .footer__logo a {
@@ -1971,21 +1986,43 @@ ol {
 .shopping__cart__table table tbody tr td.product__cart__item {
   width: 400px;
 }
-.shopping__cart__table table tbody tr td.product__cart__item .product__cart__item__pic {
+.shopping__cart__table
+  table
+  tbody
+  tr
+  td.product__cart__item
+  .product__cart__item__pic {
   float: left;
   margin-right: 30px;
 }
-.shopping__cart__table table tbody tr td.product__cart__item .product__cart__item__text {
+.shopping__cart__table
+  table
+  tbody
+  tr
+  td.product__cart__item
+  .product__cart__item__text {
   overflow: hidden;
   padding-top: 21px;
 }
-.shopping__cart__table table tbody tr td.product__cart__item .product__cart__item__text h6 {
+.shopping__cart__table
+  table
+  tbody
+  tr
+  td.product__cart__item
+  .product__cart__item__text
+  h6 {
   color: #111111;
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.shopping__cart__table table tbody tr td.product__cart__item .product__cart__item__text h5 {
+.shopping__cart__table
+  table
+  tbody
+  tr
+  td.product__cart__item
+  .product__cart__item__text
+  h5 {
   color: #0d0d0d;
   font-weight: 700;
 }
@@ -1995,14 +2032,28 @@ ol {
 .shopping__cart__table table tbody tr td.quantity__item .quantity .pro-qty-2 {
   width: 80px;
 }
-.shopping__cart__table table tbody tr td.quantity__item .quantity .pro-qty-2 input {
+.shopping__cart__table
+  table
+  tbody
+  tr
+  td.quantity__item
+  .quantity
+  .pro-qty-2
+  input {
   width: 50px;
   border: none;
   text-align: center;
   color: #111111;
   font-size: 16px;
 }
-.shopping__cart__table table tbody tr td.quantity__item .quantity .pro-qty-2 .qtybtn {
+.shopping__cart__table
+  table
+  tbody
+  tr
+  td.quantity__item
+  .quantity
+  .pro-qty-2
+  .qtybtn {
   font-size: 16px;
   color: #888888;
   width: 10px;
@@ -3161,7 +3212,12 @@ ol {
   .shopping__cart__table {
     overflow-y: auto;
   }
-  .shopping__cart__table table tbody tr td.product__cart__item .product__cart__item__pic {
+  .shopping__cart__table
+    table
+    tbody
+    tr
+    td.product__cart__item
+    .product__cart__item__pic {
     float: none;
     margin-right: 0;
   }
@@ -3262,4 +3318,4 @@ ol {
   .categories__text:before {
     height: 250px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
