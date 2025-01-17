@@ -48,7 +48,8 @@
             </div>
         </div>
         <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+        <a href="#" class="search-switch">
+       <img src= "img/icon/search.png" alt=""></a>
             <a href="#"><img src="img/icon/heart.png" alt=""></a>
             <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
             <div class="price">$0.00</div>
@@ -73,7 +74,7 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a href="#">Sign in</a>
+                                <a href="login.html">Sign in</a>
                                 <a href="#">FAQs</a>
                             </div>
                             <div class="header__top__hover">
@@ -115,12 +116,22 @@
                         </ul>
                     </nav>
                 </div>
+       
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <!-- <a href="#"  id="heart-icon" class="search-switch"><img src="img/icon/search.png" alt=""></a> -->
+                        <!-- <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <input
+                          type="text"
+                          id="search-input"
+                          class="search-input"
+                          placeholder="Search here..."
+                          style="display: none; margin-left: 10px;"
+                        /> -->
                         <a href="#"><img src="img/icon/heart.png" alt=""></a>
                         <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
+                        <div id="profile" class="profile"></div>
                     </div>
                 </div>
             </div>
@@ -128,19 +139,52 @@
         </div>
     </header>
     <!-- Header Section End -->
-
+    <script src="profile.js"></script>
+    <!-- <script>
+        // إظهار وإخفاء حقل الإدخال
+        const searchSwitch = document.querySelector('.search-switch');
+        const searchInput = document.getElementById('search-input');
+      
+        searchSwitch.addEventListener('click', (e) => {
+          e.preventDefault(); // منع الانتقال الافتراضي
+          searchInput.style.display = searchInput.style.display === 'block' ? 'none' : 'block';
+        });
+      
+        // توجيه المستخدم إلى الصفحة المطلوبة بناءً على المدخل
+        searchInput.addEventListener('keyup', (e) => {
+          if (e.key === 'Enter') {
+            const query = searchInput.value.toLowerCase(); // قراءة النص وتحويله إلى أحرف صغيرة
+            const pages = {
+              home: './index.html',
+              shop: './shop.html',
+              about: './about.html',
+              'shop details': './shop-details.html',
+              'shopping cart': './shopping-cart.html',
+              'check out': './checkout.html',
+              blog: './blog.html',
+              contacts: './contact.html'
+            };
+      
+            // التحقق من وجود الصفحة المطلوبة
+            if (pages[query]) {
+              window.location.href = pages[query]; // الانتقال إلى الصفحة
+            } else {
+              alert('Page not found!'); // رسالة في حال عدم العثور على الصفحة
+            }
+          }
+        });
+      </script> -->
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="hero__slider owl-carousel">
-            <div class="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
+            <div class="hero__items set-bg" data-setbg="img/hero/hero-1.webp">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2030</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                commitment to exceptional quality.</p>
+                                <h6>Exclusive Gifts</h6>
+                                <h2>Unique Gifts for Every Occasion</h2>
+                                <p>Discover handpicked gifts crafted with love and care. Perfect for making every moment unforgettable.</p>
                                 <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -158,10 +202,9 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2030</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                commitment to exceptional quality.</p>
+                                <h6>Personalized Gifts</h6>
+                                <h2>Make It Special with Custom Touches</h2>
+                                    <p>From custom frames to engraved keepsakes, we offer gifts that speak from the heart.</p>
                                 <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -188,7 +231,7 @@
                             <img src="img/banner/banner-1.jpg" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Clothing Collections 2030</h2>
+                            <h2>Personalized Gifts</h2>
                             <a href="#">Shop now</a>
                         </div>
                     </div>
@@ -199,7 +242,7 @@
                             <img src="img/banner/banner-2.jpg" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Accessories</h2>
+                            <h2>Luxury Gift Sets</h2>
                             <a href="#">Shop now</a>
                         </div>
                     </div>
@@ -210,7 +253,7 @@
                             <img src="img/banner/banner-3.jpg" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Shoes Spring 2030</h2>
+                            <h2>Seasonal Gifts</h2>
                             <a href="#">Shop now</a>
                         </div>
                     </div>
@@ -278,7 +321,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Piqué Biker Jacket</h6>
+                            <h6>Frame of Memories</h6>
                             <a href="#" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
@@ -313,7 +356,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Multi-pocket Chest Bag</h6>
+                            <h6>Vintage Wall Art</h6>
                             <a href="#" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
@@ -347,7 +390,7 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Diagonal Textured Cap</h6>
+                            <h6>Miniature Sculptures</h6>
                             <a href="#" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
@@ -636,7 +679,7 @@
     <!-- Latest Blog Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer">
+     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -650,12 +693,12 @@
                 </div>
                 <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6>Shopping</h6>
+                        <h6>Explore</h6>
                         <ul>
-                            <li><a href="#">Clothing Store</a></li>
-                            <li><a href="#">Trending Shoes</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Sale</a></li>
+                            <li><a href="#">Photo Frames</a></li>
+                            <li><a href="#">Decorative Journals</a></li>
+                            <li><a href="#">Sculpted Accessories</a></li>
+                            <li><a href="#">Special Offers</a></li>
                         </ul>
                     </div>
                 </div>
@@ -686,7 +729,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="footer__copyright__text">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                       
                         <p>Copyright ©
                             <script>
                                 document.write(new Date().getFullYear());
@@ -694,12 +737,12 @@
                             All rights reserved | This template is made with <i class="fa fa-heart-o"
                             aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         </p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                       
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> 
     <!-- Footer Section End -->
 
     <!-- Search Begin -->
@@ -714,7 +757,7 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script> 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
@@ -723,7 +766,7 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+     <script src="js/main.js"></script> 
 </body>
 
 </html>
