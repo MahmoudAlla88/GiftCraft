@@ -260,7 +260,7 @@
  
     }
 </script>
-
+<!-- 
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
@@ -327,8 +327,87 @@
         alert(errorMessage);
       });
   });
+ -->
+ <script type="module">
+    // Import Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { 
+        getAuth, 
+        createUserWithEmailAndPassword, 
+        signInWithEmailAndPassword, 
+        onAuthStateChanged, 
+        signOut 
+    } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
+    // Firebase Configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDLoidyKaG3kPT0BIet9h6wZ_BwjrljkFg",
+        authDomain: "login-e88bc.firebaseapp.com",
+        projectId: "login-e88bc",
+        storageBucket: "login-e88bc.firebaseapp.com",
+        messagingSenderId: "64137450004",
+        appId: "1:64137450004:web:ecbcd3519587ebd0658d01"
+    };
 
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Login Functionality
+    document.getElementById("submit").addEventListener("click", async function (e) {
+        e.preventDefault();
+
+        const userEmail = document.getElementById("userEmail").value;
+        const userPassword = document.getElementById("userPassword").value;
+
+        if (!userEmail || !userPassword) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPassword);
+            const user = userCredential.user;
+            alert("You have signed in successfully!");
+            window.location.href = "index.html"; // Redirect to home
+        } catch (error) {
+            alert(`Login failed: ${error.message}`);
+        }
+    });
+
+    // Registration Functionality
+    document.getElementById("sub").addEventListener("click", async function (e) {
+        e.preventDefault();
+
+        const firstName = document.getElementById("Firstname").value;
+        const lastName = document.getElementById("Lastname").value;
+        const email = document.getElementById("Email").value;
+        const password = document.getElementById("Password").value;
+
+        if (!firstName || !lastName || !email || !password) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            alert("Account created successfully!");
+            window.location.href = "index.html"; // Redirect to login or home
+        } catch (error) {
+            alert(`Registration failed: ${error.message}`);
+        }
+    });
+
+    // Show User Profile
+    onAuthStateChanged(auth, (user) => {
+        const profileDiv = document.getElementById("profile");
+        if (user) {
+            profileDiv.textContent = `Welcome, ${user.email}`;
+        } else {
+            profileDiv.textContent = "You are not logged in.";
+        }
+    });
+</script>
 
 // const submit = document.getElementById("submit");
 

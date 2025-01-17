@@ -1,47 +1,88 @@
-const loginForm = document.getElementById("login-form");
-    const profileDiv = document.getElementById("profile");
-    const fullNameSpan = document.getElementById("full-name");
+// Import the necessary Firebase modules
+// استيراد جميع الوظائف اللازمة من Firebase
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+// import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-    const loginButton = document.getElementById("login-btn");
-    const logoutButton = document.getElementById("logout-btn");
+// // إعداد Firebase
+// const firebaseConfig = {
+//     apiKey: "AIzaSyDLoidyKaG3kPT0BIet9h6wZ_BwjrljkFg",
+//     authDomain: "login-e88bc.firebaseapp.com",
+//     projectId: "login-e88bc",
+//     storageBucket: "login-e88bc.firebasestorage.app",
+//     messagingSenderId: "64137450004",
+//     appId: "1:64137450004:web:ecbcd3519587ebd0658d01"
+// };
 
-    // Check if user data exists in localStorage
-    const storedFirstName = localStorage.getItem("firstName");
-    const storedLastName = localStorage.getItem("lastName");
+// // تهيئة Firebase
+// const app = initializeApp(firebaseConfig);
+// const auth1 = getAuth(app);
 
-    if (storedFirstName && storedLastName) {
-        // User is already logged in
-        showProfile(storedFirstName, storedLastName);
-    }
 
-    loginButton.addEventListener("click", function () {
-        const firstName = document.getElementById("first-name").value.trim();
-        const lastName = document.getElementById("last-name").value.trim();
 
-        if (firstName && lastName) {
-            // Save to localStorage
-            localStorage.setItem("firstName", firstName);
-            localStorage.setItem("lastName", lastName);
 
-            // Show profile
-            showProfile(firstName, lastName);
-        } else {
-            alert("Please enter both your first and last name.");
-        }
-    });
 
-    logoutButton.addEventListener("click", function () {
-        // Remove user data from localStorage
-        localStorage.removeItem("firstName");
-        localStorage.removeItem("lastName");
 
-        // Show login form
-        loginForm.classList.remove("hidden");
-        profileDiv.classList.add("hidden");
-    });
+// document.addEventListener("DOMContentLoaded", function () {
+//     const auth1 = getAuth(); // تأكد من تهيئة Firebase بشكل صحيح
+//     const profileDiv = document.getElementById("profile");
+//     const fullNameSpan = document.getElementById("full-name");
 
-    function showProfile(firstName, lastName) {
-        fullNameSpan.textContent = `${firstName} ${lastName}`;
-        loginForm.classList.add("hidden");
-        profileDiv.classList.remove("hidden");
-    }
+//     // تحقق من حالة المستخدم عند تحميل الصفحة
+//     onAuthStateChanged(auth1, (user) => {
+//         if (user) {
+//             // إذا كان المستخدم مسجلاً الدخول، اعرض اسمه
+//             const displayName = user.displayName || `${user.email}`; // إذا كان هناك اسم عرض، استخدمه، وإلا استخدم البريد الإلكتروني
+//             fullNameSpan.textContent = displayName;
+
+//             // إخفاء شاشة تسجيل الدخول وعرض البيانات الشخصية
+//             document.getElementById("login").classList.add("hidden");
+//             profileDiv.classList.remove("hidden");
+//         } else {
+//             // إذا لم يكن هناك مستخدم مسجل دخول، اعرض شاشة تسجيل الدخول
+//             document.getElementById("login").classList.remove("hidden");
+//             profileDiv.classList.add("hidden");
+//         }
+//     });
+
+//     // تسجيل الدخول عند الضغط على زر "login"
+//     const submit = document.getElementById("submit");
+//     submit.addEventListener("click", function (e) {
+//         e.preventDefault();
+
+//         const userEmail = document.getElementById("userEmail").value;
+//         const userPassword = document.getElementById("userPassword").value;
+
+//         if (!userEmail || !userPassword) {
+//             alert("Please fill in all fields.");
+//             return;
+//         }
+
+//         // تسجيل الدخول باستخدام Firebase
+//         signInWithEmailAndPassword(auth1, userEmail, userPassword)
+//             .then((userCredential) => {
+//                 const user = userCredential.user;
+//                 console.log("User signed in:", user);
+//                 alert("You have signed in successfully!");
+//                 window.location.href = "home.html"; // بعد الدخول بنجاح، انتقل إلى صفحة home
+//             })
+//             .catch((error) => {
+//                 console.error("Error: ", error.code, error.message);
+//                 alert(`Login failed: ${error.message}`);
+//             });
+//     });
+
+//     // تسجيل الخروج
+//     const logoutButton = document.getElementById("logout-btn");
+//     if (logoutButton) {
+//         logoutButton.addEventListener("click", function () {
+//             signOut(auth1)
+//                 .then(() => {
+//                     // بعد تسجيل الخروج، عودة إلى صفحة login
+//                     window.location.href = "login.html";
+//                 })
+//                 .catch((error) => {
+//                     console.error("Sign-out error: ", error);
+//                 });
+//         });
+//     }
+// });
