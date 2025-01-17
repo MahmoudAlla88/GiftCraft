@@ -99,6 +99,10 @@
         </div>
     </div>
 </div>   
+
+<script src="profile.js"></script>
+
+
 <!-- <script>
    
    function myMenuFunction() {
@@ -310,6 +314,10 @@
         const user = userCredential.user;
         console.log("User created:", user);
         alert("Account created successfully!");
+        
+    
+        login()
+        
       })
       .catch((error) => {
         // Handle errors
@@ -375,6 +383,7 @@ submit.addEventListener("click", function (e) {
       const userCredential = await signInWithEmailAndPassword(auth1, userEmail, userPassword);
       const user = userCredential.user;
       alert("You have signed in successfully!");
+      window.location.href = "index.html"; 
       console.log("User signed in:", user);
     } catch (error) {
       const errorCode = error.code;
@@ -386,7 +395,7 @@ submit.addEventListener("click", function (e) {
 
   userSignIn(); // Call the function to sign in the user
 });
-</script>
+
 </script>
 
 <!-- <script type="module">

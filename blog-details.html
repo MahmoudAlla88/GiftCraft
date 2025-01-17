@@ -127,6 +127,41 @@
             <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
     </header>
+
+<script>
+    // إظهار وإخفاء حقل الإدخال
+    const searchSwitch = document.querySelector('.search-switch');
+    const searchInput = document.getElementById('search-input');
+  
+    searchSwitch.addEventListener('click', (e) => {
+      e.preventDefault(); // منع الانتقال الافتراضي
+      searchInput.style.display = searchInput.style.display === 'block' ? 'none' : 'block';
+    });
+  
+    // توجيه المستخدم إلى الصفحة المطلوبة بناءً على المدخل
+    searchInput.addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') {
+        const query = searchInput.value.toLowerCase(); // قراءة النص وتحويله إلى أحرف صغيرة
+        const pages = {
+          home: './index.html',
+          shop: './shop.html',
+          about: './about.html',
+          'shop details': './shop-details.html',
+          'shopping cart': './shopping-cart.html',
+          'check out': './checkout.html',
+          blog: './blog.html',
+          contacts: './contact.html'
+        };
+  
+        // التحقق من وجود الصفحة المطلوبة
+        if (pages[query]) {
+          window.location.href = pages[query]; // الانتقال إلى الصفحة
+        } else {
+          alert('Page not found!'); // رسالة في حال عدم العثور على الصفحة
+        }
+      }
+    });
+  </script>
     <!-- Header Section End -->
 
     <!-- Blog Details Hero Begin -->
