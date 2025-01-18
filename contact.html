@@ -163,14 +163,14 @@
                         <form action="#">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" placeholder="Name" id="name">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email">
+                                    <input type="email" placeholder="Email" id="email">
                                 </div>
                                 <div class="col-lg-12">
-                                    <textarea placeholder="Message"></textarea>
-                                    <button type="submit" class="site-btn">Send Message</button>
+                                    <textarea placeholder="Message" id="msg"></textarea>
+                                    <button type="submit" class="site-btn" id="submitBtn">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -265,6 +265,59 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
+     <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import {
+            getFirestore,
+            addDoc,
+            collection,
+            getDocs,
+            deleteDoc,
+            doc,
+            getDoc,
+            updateDoc
+
+        } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyADpIPsj1xK_9L7t8XMFB_CGQN0RBzqDiM",
+            authDomain: "gift-shop-779d5.firebaseapp.com",
+            projectId: "gift-shop-779d5",
+            storageBucket: "gift-shop-779d5.firebasestorage.app",
+            messagingSenderId: "1046929050162",
+            appId: "1:1046929050162:web:48582f43a2a466c7c78a2b"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        async function sendData(e){
+            e.preventDefault()
+
+
+            const name = document.getElementById("name").value;  
+            const email = document.getElementById("email").value;  
+            const msg = document.getElementById("msg").value;
+            
+            try {
+                const mohammed = await addDoc(collection(db, "contactData"),{
+                    userName:name,
+                    userEmail:email,
+                    userMsg:msg,
+                })
+                alert("data send")
+            }
+            catch(error) {
+                console.log(error)
+            }
+        }
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", sendData);
+     </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
