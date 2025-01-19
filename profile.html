@@ -212,7 +212,7 @@ const firebaseConfig = {
         // Display user info
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                document.getElementById("loggedUserFName").textContent = user.firstName || "N/A";
+                document.getElementById("loggedUserFName").textContent = user.displayName || "N/A";
                 document.getElementById("loggedUserLName").textContent = ""; // Add if lastName is stored separately
                 document.getElementById("loggedUserEmail").textContent = user.email;
             } else {
