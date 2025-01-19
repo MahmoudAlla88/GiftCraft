@@ -20,6 +20,7 @@
         .star.selected {
           color: gold;
         }
+
         /* تنسيق الجسم بشكل عام */
 body {
     font-family: Arial, sans-serif;
@@ -104,10 +105,6 @@ form button:hover {
     width: 100%;
     max-width: 600px;
     margin-top: 30px;
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-
 }
 
 #reviewsContainer div {
@@ -116,7 +113,6 @@ form button:hover {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    width: 100%;
 }
 
 #reviewsContainer p {
@@ -137,9 +133,127 @@ h2 {
 }
 
       </style>
+
+
 </head>
 
 <body>
+
+
+
+    <!-- <div class="flex-box">
+        <div class="left">
+            <div class="big-img">
+                <img src="img/images.jpg" alt="Product Image">
+            </div>
+            <div class="images">
+                <div class="small-img">
+                    <img src="img/images.jpg" onclick="showImg(this.src)" alt="Thumbnail">
+                </div>
+                <div class="small-img">
+                    <img src="img/img.webp" onclick="showImg(this.src)" alt="Thumbnail">
+                </div>
+                <div class="small-img">
+                    <img src="img/img1.jpg" onclick="showImg(this.src)" alt="Thumbnail">
+                </div>
+                <div class="small-img">
+                    <img src="img/images.jpg" onclick="showImg(this.src)" alt="Thumbnail">
+                </div>
+                  <div class="small-img">
+                    <img src="img/images (1).jpg" onclick="showImg(this.src)" alt="Thumbnail">
+                </div>
+                  <div class="small-img">
+                    <img src="img/images (2).jpg" onclick="showImg(this.src)" alt="Thumbnail">
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="url">Home > Product > T-Shirt</div>
+            <div class="pname" id="product-name">T-Shirts for Men</div>
+            <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price" id="product-price">$40</div>
+            <div class="size">
+                <p>Size :</p>
+                <div class="psize active">M</div>
+                <div class="psize">L</div>
+                <div class="psize">XL</div>
+                <div class="psize">XXL</div>
+            </div>
+            <div class="quantity">
+                <p>Quantity :</p>
+                <input type="number" min="1" max="5" value="1" id="quantity">
+            </div>
+            <div class="btn-box">
+                <button class="cart-btn" id="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let bigImg = document.querySelector('.big-img img');
+        function showImg(pic) {
+            bigImg.src = pic;
+        }
+    </script>
+
+    <script type="module">
+        // Import the functions you need from Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+    apiKey: "AIzaSyDtcR-i8NJyxAADucL7z5J28cf4BNQaggw",
+    authDomain: "fir-3c6c5.firebaseapp.com",
+    databaseURL: "https://fir-3c6c5-default-rtdb.firebaseio.com",
+    projectId: "fir-3c6c5",
+    storageBucket: "fir-3c6c5.firebasestorage.app",
+    messagingSenderId: "279469604138",
+    appId: "1:279469604138:web:15b5f2ef3e91ddf52ab253"
+  };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Add to Cart functionality
+        document.getElementById("cart-btn").addEventListener("click", () => {
+            const productName = document.getElementById("product-name").textContent;
+            const productPrice = document.getElementById("product-price").textContent;
+            const quantity = document.getElementById("quantity").value;
+
+            const cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity,
+            };
+
+            // Save to Firebase Realtime Database
+            const cartRef = ref(database, 'cart/');
+            push(cartRef, cartItem)
+                .then(() => {
+                    alert("Product added to cart successfully!");
+                })
+                .catch((error) => {
+                    alert("Error adding to cart: " + error.message);
+                });
+        });
+    </script>
+
+
+ -->
+
+
+
+
     <h1>Review and Rating System</h1>
 
     <!-- Form to add a comment -->
@@ -274,3 +388,8 @@ h2 {
 </body>
 
 </html>
+
+
+
+
+

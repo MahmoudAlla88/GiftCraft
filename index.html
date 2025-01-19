@@ -7,7 +7,7 @@
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GiftCraft</title>
+    <title>giftCraft</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -131,7 +131,7 @@
                         <a href="#"><img src="img/icon/heart.png" alt=""></a>
                         <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
-                       <span id="profile" class="profile" style="width: 30px; height: 30px;">
+                        <span id="profile" class="profile">
                             <span> <a href="profile.html" id="full-name"></a></span>
                           </span>
                     </div>
@@ -179,10 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
              authLink.textContent = 'Log out';
              authLink1.textContent = 'Log out';
             // إذا كان المستخدم مسجلاً الدخول، اعرض اسمه
-            // const displayName = user.displayName || `${user.email}`; // إذا كان هناك اسم عرض، استخدمه، وإلا استخدم البريد الإلكتروني
-            fullNameSpan.innerHTML = '<img src="img/icon/th.jpg" alt="profile" style="width: 30px; height: 30px;">';
-
-
+            const displayName = user.displayName || `${user.email}`; // إذا كان هناك اسم عرض، استخدمه، وإلا استخدم البريد الإلكتروني
+            // fullNameSpan.textContent = displayName;
+            fullNameSpan.innerHTML = '<img src="img/icon/th.png" alt="profile" style="width: 30px; height: 30px;">';
             // إخفاء شاشة تسجيل الدخول وعرض البيانات الشخصية
             // document.getElementById("login").classList.add("hidden");
             // profileDiv.classList.remove("hidden");
@@ -324,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-lg-7 offset-lg-4">
                     <div class="banner__item">
                         <div class="banner__item__pic">
-                            <img src="img/banner/banner-1.jpg" alt="">
+                            <img style="width: 500px; height: 600px;" src="img/banner/banner-1.webp" alt="">
                         </div>
                         <div class="banner__item__text">
                             <h2>Personalized Gifts</h2>
@@ -335,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-lg-5">
                     <div class="banner__item banner__item--middle">
                         <div class="banner__item__pic">
-                            <img src="img/banner/banner-2.jpg" alt="">
+                            <img src="img/banner/banner-2.jpeg" alt="">
                         </div>
                         <div class="banner__item__text">
                             <h2>Luxury Gift Sets</h2>
@@ -374,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="row product__filter">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpeg">
                             <span class="label">New</span>
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
@@ -409,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/pexels-photo-3309957.webp">
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
@@ -443,7 +442,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item sale">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/pexels-photo-545575.webp">
                             <span class="label">Sale</span>
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
@@ -478,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/free-photo-of-silver-dragon-on-white-background.jpeg">
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
@@ -512,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-5.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/pexels-photo-16163752.webp">
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
@@ -546,7 +545,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item sale">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-6.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/pexels-photo-1214205.webp">
                             <span class="label">Sale</span>
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
@@ -581,7 +580,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/pexels-photo-3373177.jpeg">
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
@@ -615,7 +614,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-8.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/pexels-photo-14794078.webp">
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
@@ -663,7 +662,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-4">
                     <div class="categories__hot__deal">
-                        <img src="img/product-sale.png" alt="">
+                        <img src="img/product/pexels-photo-2401863.webp" alt="">
                         <div class="hot__deal__sticker">
                             <span>Sale Of</span>
                             <h5>$29.99</h5>
@@ -706,20 +705,19 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="row">
                 <div class="col-lg-8">
                     <div class="instagram__pic">
-                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/instagram-1.jpg"></div>
-                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/instagram-2.jpg"></div>
-                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/instagram-3.jpg"></div>
-                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/instagram-4.jpg"></div>
-                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/instagram-5.jpg"></div>
-                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/instagram-6.jpg"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/free-photo-of-red-rose-on-open-book-with-white-background.jpeg"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/pexels-photo-310435.webp"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/pexels-photo-1100008.jpeg"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/pexels-photo-1693626.jpeg"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/pexels-photo-2951525.webp"></div>
+                        <div class="instagram__pic__item set-bg" data-setbg="img/instagram/pexels-photo-26570970.webp"></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="instagram__text">
-                        <h2>Instagram</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                        <h3>#Male_Fashion</h3>
+                        <h2>Follow Us on Instagram</h2>
+                    <p>Explore the latest handcrafted creations, unique gifts, and artistic designs made with love and care. Stay inspired and share your moments with us!</p>
+                    <h3>#GiftCraft</h3>
                     </div>
                 </div>
             </div>
@@ -741,7 +739,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="img/product/pexels-photo-3309957.webp"></div>
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 16 February 2020</span>
                             <h5>What Curling Irons Are The Best Ones</h5>
@@ -751,7 +749,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="img/product/pexels-photo-545575.webp"></div>
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 21 February 2020</span>
                             <h5>Eternity Bands Do Last Forever</h5>
@@ -761,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="img/about/image-3.jpg"></div>
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 28 February 2020</span>
                             <h5>The Health Benefits Of Sunglasses</h5>
@@ -781,7 +779,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                          <style>
+                                .logo {
+                                    font-family: Arial, sans-serif;
+                                    font-size: 50px;
+                                    font-weight: bold;
+                                    color: white;
+                                    background-color: black; /* إذا أردت خلفية مشابهة */
+                                    padding: 10px;
+                                    display: inline-block;
+                                }
+                                .red-letter {
+                                    color: red;
+                                }
+                            </style>   <div class="logo">
+                                <span class="red-letter">G</span>ift <span class="red-letter">C</span>raft
+                            </div>
+                            
+                           
+                            <!-- <a href="#"><img style="width: 80px; height:50;" src="icon.jpg" alt=""></a> -->
                         </div>
                         <p>The customer is at the heart of our unique business model, which includes design.</p>
                         <a href="#"><img src="img/payment.png" alt=""></a>

@@ -26,114 +26,120 @@
   </head>
 
   <body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-      <div class="loader"></div>
+      <!-- Page Preloder -->
+      <div id="preloder">
+        <div class="loader"></div>
     </div>
 
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
-      <div class="offcanvas__option">
-        <div class="offcanvas__links">
-          <a href="#">Sign in</a>
-          <a href="#">FAQs</a>
+        <div class="offcanvas__option">
+            <div class="offcanvas__links">
+                <a href="login.html" id="auth-link">Sign in</a>
+                <!-- <a href="#">FAQs</a> -->
+            </div>
+            <div class="offcanvas__top__hover">
+                <!-- <span>Usd <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>USD</li>
+                    <li>EUR</li>
+                    <li>USD</li>
+                </ul> -->
+            </div>
         </div>
-        <div class="offcanvas__top__hover">
-          <span>Usd <i class="arrow_carrot-down"></i></span>
-          <ul>
-            <li>USD</li>
-            <li>EUR</li>
-            <li>USD</li>
-          </ul>
+        <div class="offcanvas__nav__option">
+        <a href="#" class="search-switch">
+       <img src= "img/icon/search.png" alt=""></a>
+            <a href="#"><img src="img/icon/heart.png" alt=""></a>
+            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+            <div class="price">$0.00</div>
         </div>
-      </div>
-      <div class="offcanvas__nav__option">
-        <a href="#" class="search-switch"
-          ><img src="img/icon/search.png" alt=""
-        /></a>
-        <a href="#"><img src="img/icon/heart.png" alt="" /></a>
-        <a href="#"><img src="img/icon/cart.png" alt="" /> <span>0</span></a>
-        <div class="price">$0.00</div>
-      </div>
-      <div id="mobile-menu-wrap"></div>
-      <div class="offcanvas__text">
-        <p>Free shipping, 30-day return or refund guarantee.</p>
-      </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__text">
+            <!-- <p>Free shipping, 30-day return or refund guarantee.</p> -->
+        </div>
     </div>
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
     <header class="header">
-      <div class="header__top">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <!-- <div class="header__top__left">
+                            <p>Free shipping, 30-day return or refund guarantee.</p>
+                        </div> -->
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header__top__right">
+                            <div class="header__top__links">
+                                <a href="login.html" id="auth-link1">Sign in</a>
+                                <!-- <a href="#">FAQs</a> -->
+                            </div>
+                            <div class="header__top__hover">
+                                <!-- <span>Usd <i class="arrow_carrot-down"></i></span>
+                                <ul>
+                                    <li>USD</li>
+                                    <li>EUR</li>
+                                    <li>USD</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-7">
-              <div class="header__top__left">
-                <p>Free shipping, 30-day return or refund guarantee.</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-5">
-              <div class="header__top__right">
-                <div class="header__top__links">
-                  <a href="#">Sign in</a>
-                  <a href="#">FAQs</a>
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="" alt=""></a>
+                    </div>
                 </div>
-                <div class="header__top__hover">
-                  <span>Usd <i class="arrow_carrot-down"></i></span>
-                  <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                  </ul>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./shop.html">Shop</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./about.html">About Us</a></li>
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contacts</a></li>
+                        </ul>
+                    </nav>
                 </div>
-              </div>
+       
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#"  id="heart-icon" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <!-- <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <input
+                          type="text"
+                          id="search-input"
+                          class="search-input"
+                          placeholder="Search here..."
+                          style="display: none; margin-left: 10px;"
+                        /> -->
+                        <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                        <div class="price">$0.00</div>
+                        <span id="profile" class="profile">
+                            <span> <a href="profile.html" id="full-name"></a></span>
+                          </span>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3">
-            <div class="header__logo">
-              <a href="./index.html"><img src="img/logo.png" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <nav class="header__menu mobile-menu">
-              <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./shop.html">Shop</a></li>
-                <li>
-                  <a href="#">Pages</a>
-                  <ul class="dropdown">
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./shop-details.html">Shop Details</a></li>
-                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                    <li><a href="./checkout.html">Check Out</a></li>
-                    <li><a href="./blog-details.html">Blog Details</a></li>
-                  </ul>
-                </li>
-                <li class="active"><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Contacts</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-lg-3 col-md-3">
-            <div class="header__nav__option">
-              <a href="#" class="search-switch"
-                ><img src="img/icon/search.png" alt=""
-              /></a>
-              <a href="#"><img src="img/icon/heart.png" alt="" /></a>
-              <a href="#"
-                ><img src="img/icon/cart.png" alt="" /> <span>0</span></a
-              >
-              <div class="price">$0.00</div>
-            </div>
-          </div>
-        </div>
-        <div class="canvas__open"><i class="fa fa-bars"></i></div>
-      </div>
     </header>
     <!-- Header Section End -->
 
@@ -294,38 +300,38 @@
             width: 100%;
           }
         </style>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="row"style="justify-content: center;" >
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="team__item">
-              <img src="img/about/mahmoud.jpg" alt="" />
+              <img style="width: 300px; height: 350px;"  src=" img/about/mahmoud.jpg" alt="" />
               <h4>Mahmoud Suliman</h4>
               <span>Scrum Master Developer</span>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="team__item">
-              <img src="img/about/jabareen.jpg" alt="" />
+              <img style="width: 300px; height: 350px;" src="img/about/jabareen.jpg" alt="" />
               <h4>Ahmad Aljabareen</h4>
               <span>Product Owner Developer</span>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="team__item">
-              <img src="img/about/abudayyeh.jpg" alt="" />
+              <img style="width: 300px; height: 350px;"  src="img/about/abudayyeh.jpg" alt="" />
               <h4>Mohammed Abudayyeh</h4>
               <span>Quality Assurance Developer</span>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="team__item">
-              <img src="img/about/tabaza.jpg" alt="" />
+              <img style="width: 300px; height: 350px;"  src="img/about/tabaza.jpg" alt="" />
               <h4>Ahmad Tabaza</h4>
               <span>Developer</span>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="team__item">
-              <img src="img/about/ajlouni.jpg" alt="" />
+              <img style="width: 300px; height: 350px;"   src="img/about/ajlouni.jpg" alt="" />
               <h4>Mohammed Ajlouni</h4>
               <span>Developer</span>
             </div>
@@ -334,7 +340,86 @@
       </div>
     </section>
     <!-- Team Section End -->
+<!-- Team Section Begin -->
+<!-- <section class="team spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <span>Our Team</span>
+          <h2>Meet Our Team</h2>
+        </div>
+      </div>
+    </div>
+    <style>
+      .team__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
 
+      .team__item {
+        flex: 1 1 calc(20% - 20px); /* استيعاب 5 عناصر في الصف الواحد مع فجوات */
+        max-width: calc(20% - 20px);
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .team__item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* لإضافة زوايا مستديرة للصورة */
+      }
+
+      @media (max-width: 1024px) {
+        .team__item {
+          flex: 1 1 calc(33.33% - 20px); /* 3 عناصر في الصف */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .team__item {
+          flex: 1 1 calc(50% - 20px); /* عنصران في الصف */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .team__item {
+          flex: 1 1 100%; /* عنصر واحد في الصف */
+        }
+      }
+    </style>
+    <div class="team__container">
+      <div class="team__item">
+        <img style="width: 450px; height: 250px;" src="img/about/mahmoud.jpg" alt="" />
+        <h4>Mahmoud Suliman</h4>
+        <span>Scrum Master Developer</span>
+      </div>
+      <div class="team__item">
+        <img style="width: 450px; height: 250px;" src="img/about/jabareen.jpg" alt="" />
+        <h4>Ahmad Aljabareen</h4>
+        <span>Product Owner Developer</span>
+      </div>
+      <div class="team__item">
+        <img style="width: 450px; height: 250px;" src="img/about/abudayyeh.jpg" alt="" />
+        <h4>Mohammed Abudayyeh</h4>
+        <span>Quality Assurance Developer</span>
+      </div>
+      <div  class="team__item">
+        <img style="width: 450px; height: 250px;" src="img/about/tabaza.jpg" alt="" />
+        <h4>Ahmad Tabaza</h4>
+        <span>Developer</span>
+      </div>
+      <div class="team__item">
+        <img style="width: 450px; height: 250px;" src="img/about/ajlouni.jpg" alt="" />
+        <h4>Mohammed Ajlouni</h4>
+        <span>Developer</span>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- Team Section End -->
     <!-- Client Section Begin -->
     <section class="clients spad">
       <div class="container">
@@ -392,79 +477,86 @@
     </section>
     <!-- Client Section End -->
 
-    <!-- Footer Section Begin -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="footer__about">
-              <div class="footer__logo">
-                <a href="#"
-                  ><img src="img/file-L5VJD6GGxr4PEbHJHqJNjC.png" alt=""
-                /></a>
-              </div>
-              <p>The customer is at the heart of our unique business model.</p>
-              <a href="#"><img src="img/payment.png" alt="" /></a>
+   
+       <!-- Footer Section Begin -->
+       <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                          <style>
+                                .logo {
+                                    font-family: Arial, sans-serif;
+                                    font-size: 50px;
+                                    font-weight: bold;
+                                    color: white;
+                                    background-color: black; /* إذا أردت خلفية مشابهة */
+                                    padding: 10px;
+                                    display: inline-block;
+                                }
+                                .red-letter {
+                                    color: red;
+                                }
+                            </style>   <div class="logo">
+                                <span class="red-letter">G</span>ift <span class="red-letter">C</span>raft
+                            </div>
+                            
+                           
+                            <!-- <a href="#"><img style="width: 80px; height:50;" src="icon.jpg" alt=""></a> -->
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <a href="#"><img src="img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Explore</h6>
+                        <ul>
+                            <li><a href="#">Photo Frames</a></li>
+                            <li><a href="#">Decorative Journals</a></li>
+                            <li><a href="#">Sculpted Accessories</a></li>
+                            <li><a href="#">Special Offers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Shopping</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Delivary</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>NewLetter</h6>
+                        <div class="footer__newslatter">
+                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
-            <div class="footer__widget">
-              <h6>Gift Shop</h6>
-              <ul>
-                <li><a href="#">Personalized Gifts</a></li>
-                <li><a href="#">Trending Photo Frames</a></li>
-                <li><a href="#">Decorated Notebooks</a></li>
-                <li><a href="#">Customized Accessories</a></li>
-              </ul>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer__copyright__text">
+                       
+                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+                            All rights reserved | GiftCraft</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-6">
-            <div class="footer__widget">
-              <h6>Shopping</h6>
-              <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Payment Methods</a></li>
-                <li><a href="#">Delivary</a></li>
-                <li><a href="#">Return & Exchanges</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-            <div class="footer__widget">
-              <h6>NewLetter</h6>
-              <div class="footer__newslatter">
-                <p>
-                  Be the first to discover unique gifts, exclusive designs, and
-                  special discounts!
-                </p>
-                <form action="#">
-                  <input type="text" placeholder="Your email" />
-                  <button type="submit">
-                    <span class="icon_mail_alt"></span>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class="footer__copyright__text">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              <p>
-                Copyright ©
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                Copyright © 2025 All rights reserved.
-              </p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </footer> 
     <!-- Footer Section End -->
+
 
     <!-- Search Begin -->
     <div class="search-model">
