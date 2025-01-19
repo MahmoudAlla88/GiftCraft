@@ -100,7 +100,7 @@
     </div>
 </div>   
 
-<script src="profile.js"></script>
+
 
 
 <!-- <script>
@@ -356,10 +356,14 @@
     // Login Functionality
     document.getElementById("submit").addEventListener("click", async function (e) {
         e.preventDefault();
+<<<<<<< HEAD
         const firstName1 = document.getElementById("Firstname").value;
+=======
+      
+>>>>>>> 89a025bcdad3753c790fe0ccba88bc03c426f84d
         const userEmail = document.getElementById("userEmail").value;
         const userPassword = document.getElementById("userPassword").value;
-
+     
         if (!userEmail || !userPassword) {
             alert("Please fill in all fields.");
             return;
@@ -369,7 +373,11 @@
             const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPassword,firstName1);
             const user = userCredential.user;
             alert("You have signed in successfully!");
+<<<<<<< HEAD
             alert(`Welcome, ${firstName1}`);
+=======
+           
+>>>>>>> 89a025bcdad3753c790fe0ccba88bc03c426f84d
             window.location.href = "index.html"; // Redirect to home
         } catch (error) {
             alert(`Login failed: ${error.message}`);
@@ -393,8 +401,13 @@
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password,firstName);
             alert("Account created successfully!");
+<<<<<<< HEAD
         //    alert(`Welcome, ${firstName}`);
             login() // Redirect to login or home
+=======
+            alert(`wellcome ${firstName}`)
+            window.location.href = "index.html"; // Redirect to login or home
+>>>>>>> 89a025bcdad3753c790fe0ccba88bc03c426f84d
         } catch (error) {
             alert(`Registration failed: ${error.message}`);
         }
@@ -402,9 +415,15 @@
 
     // Show User Profile
     // onAuthStateChanged(auth, (user) => {
+<<<<<<< HEAD
     //     const profileDiv = document.getElementById("profile");
     //     if (user) {
     //         profileDiv.textContent = `Welcome, ${user.email}`;
+=======
+    //     const profileDiv = document.getElementById("full-name");
+    //     if (user) {
+    //         profileDiv.textContent = `Welcome, ${user.firstName}`;
+>>>>>>> 89a025bcdad3753c790fe0ccba88bc03c426f84d
     //     } else {
     //         profileDiv.textContent = "You are not logged in.";
     //     }
