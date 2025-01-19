@@ -356,7 +356,7 @@
     // Login Functionality
     document.getElementById("submit").addEventListener("click", async function (e) {
         e.preventDefault();
-
+        const firstName1 = document.getElementById("Firstname").value;
         const userEmail = document.getElementById("userEmail").value;
         const userPassword = document.getElementById("userPassword").value;
 
@@ -366,9 +366,10 @@
         }
 
         try {
-            const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPassword);
+            const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPassword,firstName1);
             const user = userCredential.user;
             alert("You have signed in successfully!");
+            alert(`Welcome, ${firstName1}`);
             window.location.href = "index.html"; // Redirect to home
         } catch (error) {
             alert(`Login failed: ${error.message}`);
@@ -390,23 +391,24 @@
         }
 
         try {
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password,firstName);
             alert("Account created successfully!");
-            window.location.href = "index.html"; // Redirect to login or home
+        //    alert(`Welcome, ${firstName}`);
+            login() // Redirect to login or home
         } catch (error) {
             alert(`Registration failed: ${error.message}`);
         }
     });
 
     // Show User Profile
-    onAuthStateChanged(auth, (user) => {
-        const profileDiv = document.getElementById("profile");
-        if (user) {
-            profileDiv.textContent = `Welcome, ${user.email}`;
-        } else {
-            profileDiv.textContent = "You are not logged in.";
-        }
-    });
+    // onAuthStateChanged(auth, (user) => {
+    //     const profileDiv = document.getElementById("profile");
+    //     if (user) {
+    //         profileDiv.textContent = `Welcome, ${user.email}`;
+    //     } else {
+    //         profileDiv.textContent = "You are not logged in.";
+    //     }
+    // });
 </script>
 
 // const submit = document.getElementById("submit");

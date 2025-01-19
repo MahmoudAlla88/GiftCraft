@@ -7,7 +7,7 @@
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Male-Fashion | Template</title>
+    <title>GiftCraft</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -36,15 +36,15 @@
         <div class="offcanvas__option">
             <div class="offcanvas__links">
                 <a href="login.html" id="auth-link">Sign in</a>
-                <a href="#">FAQs</a>
+                <!-- <a href="#">FAQs</a> -->
             </div>
             <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
+                <!-- <span>Usd <i class="arrow_carrot-down"></i></span>
                 <ul>
                     <li>USD</li>
                     <li>EUR</li>
                     <li>USD</li>
-                </ul>
+                </ul> -->
             </div>
         </div>
         <div class="offcanvas__nav__option">
@@ -56,7 +56,7 @@
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
+            <!-- <p>Free shipping, 30-day return or refund guarantee.</p> -->
         </div>
     </div>
     <!-- Offcanvas Menu End -->
@@ -75,15 +75,15 @@
                         <div class="header__top__right">
                             <div class="header__top__links">
                                 <a href="login.html" id="auth-link1">Sign in</a>
-                                <a href="#">FAQs</a>
+                                <!-- <a href="#">FAQs</a> -->
                             </div>
                             <div class="header__top__hover">
-                                <span>Usd <i class="arrow_carrot-down"></i></span>
+                                <!-- <span>Usd <i class="arrow_carrot-down"></i></span>
                                 <ul>
                                     <li>USD</li>
                                     <li>EUR</li>
                                     <li>USD</li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
        
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <!-- <a href="#"  id="heart-icon" class="search-switch"><img src="img/icon/search.png" alt=""></a> -->
+                        <a href="#"  id="heart-icon" class="search-switch"><img src="img/icon/search.png" alt=""></a>
                         <!-- <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
                         <input
                           type="text"
@@ -131,8 +131,8 @@
                         <a href="#"><img src="img/icon/heart.png" alt=""></a>
                         <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
-                        <span id="profile" class="profile">
-                            <span> <span id="full-name"></span></span>
+                       <span id="profile" class="profile" style="width: 30px; height: 30px;">
+                            <span> <a href="profile.html" id="full-name"></a></span>
                           </span>
                     </div>
                 </div>
@@ -173,18 +173,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // تحقق من حالة المستخدم عند تحميل الصفحة
     onAuthStateChanged(auth1, (user) => {
         if (user) {
-            alert(`willcome ${user.email}`)
+            // alert(`willcome ${user.email}`)
             const authLink = document.getElementById('auth-link');
             const authLink1 = document.getElementById('auth-link1');
              authLink.textContent = 'Log out';
              authLink1.textContent = 'Log out';
             // إذا كان المستخدم مسجلاً الدخول، اعرض اسمه
-            const displayName = user.displayName || `${user.email}`; // إذا كان هناك اسم عرض، استخدمه، وإلا استخدم البريد الإلكتروني
-            fullNameSpan.textContent = displayName;
+            // const displayName = user.displayName || `${user.email}`; // إذا كان هناك اسم عرض، استخدمه، وإلا استخدم البريد الإلكتروني
+            fullNameSpan.innerHTML = '<img src="img/icon/th.jpg" alt="profile" style="width: 30px; height: 30px;">';
+
 
             // إخفاء شاشة تسجيل الدخول وعرض البيانات الشخصية
-            document.getElementById("login").classList.add("hidden");
-            profileDiv.classList.remove("hidden");
+            // document.getElementById("login").classList.add("hidden");
+            // profileDiv.classList.remove("hidden");
         } else {
             // إذا لم يكن هناك مستخدم مسجل دخول، اعرض شاشة تسجيل الدخول
             document.getElementById("login").classList.remove("hidden");
@@ -193,46 +194,47 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // تسجيل الدخول عند الضغط على زر "login"
-    const submit = document.getElementById("submit");
-    submit.addEventListener("click", function (e) {
-        e.preventDefault();
+    // const submit = document.getElementById("submit");
+    // submit.addEventListener("click", function (e) {
+    //     e.preventDefault();
 
-        const userEmail = document.getElementById("userEmail").value;
-        const userPassword = document.getElementById("userPassword").value;
+    //     const userEmail = document.getElementById("userEmail").value;
+    //     const userPassword = document.getElementById("userPassword").value;
 
-        if (!userEmail || !userPassword) {
-            alert("Please fill in all fields.");
-            return;
-        }
+    //     if (!userEmail || !userPassword) {
+    //         alert("Please fill in all fields.");
+    //         return;
+    //     }
 
         // تسجيل الدخول باستخدام Firebase
-        signInWithEmailAndPassword(auth1, userEmail, userPassword)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log("User signed in:", user);
-                alert("You have signed in successfully!");
-                window.location.href = "home.html"; // بعد الدخول بنجاح، انتقل إلى صفحة home
-            })
-            .catch((error) => {
-                console.error("Error: ", error.code, error.message);
-                alert(`Login failed: ${error.message}`);
-            });
-    });
+//         signInWithEmailAndPassword(auth1, userEmail, userPassword)
+//             .then((userCredential) => {
+//                 const user = userCredential.user;
+//                 console.log("User signed in:", user);
+//                 alert("You have signed in successfully!");
+//                 window.location.href = "home.html"; // بعد الدخول بنجاح، انتقل إلى صفحة home
+//             })
+//             .catch((error) => {
+//                 console.error("Error: ", error.code, error.message);
+//                 alert(`Login failed: ${error.message}`);
+//             });
+//     }
+// );
 
     // تسجيل الخروج
-    const logoutButton = document.getElementById("logout-btn");
-    if (logoutButton) {
-        logoutButton.addEventListener("click", function () {
-            signOut(auth1)
-                .then(() => {
-                    // بعد تسجيل الخروج، عودة إلى صفحة login
-                    window.location.href = "login.html";
-                })
-                .catch((error) => {
-                    console.error("Sign-out error: ", error);
-                });
-        });
-    }
+    // const logoutButton = document.getElementById("logout-btn");
+    // if (logoutButton) {
+    //     logoutButton.addEventListener("click", function () {
+    //         signOut(auth1)
+    //             .then(() => {
+    //                 // بعد تسجيل الخروج، عودة إلى صفحة login
+    //                 window.location.href = "login.html";
+    //             })
+    //             .catch((error) => {
+    //                 console.error("Sign-out error: ", error);
+    //             });
+    //     });
+    // }
 });
     </script>
     <!-- <script>
