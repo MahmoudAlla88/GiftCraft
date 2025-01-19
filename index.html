@@ -56,7 +56,7 @@
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
+            <!-- <p>Free shipping, 30-day return or refund guarantee.</p> -->
         </div>
     </div>
     <!-- Offcanvas Menu End -->
@@ -132,7 +132,7 @@
                         <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
                         <span id="profile" class="profile">
-                            <span> <span id="full-name"></span></span>
+                            <span> <a href="profile.html" id="full-name"></a></span>
                           </span>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // إذا كان المستخدم مسجلاً الدخول، اعرض اسمه
             const displayName = user.displayName || `${user.email}`; // إذا كان هناك اسم عرض، استخدمه، وإلا استخدم البريد الإلكتروني
             // fullNameSpan.textContent = displayName;
-
+            fullNameSpan.innerHTML = '<img src="img/icon/th.png" alt="profile" style="width: 30px; height: 30px;">';
             // إخفاء شاشة تسجيل الدخول وعرض البيانات الشخصية
             // document.getElementById("login").classList.add("hidden");
             // profileDiv.classList.remove("hidden");
@@ -780,7 +780,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#"><img style="width: 80px; height:50;" src="icon.jpg" alt=""></a>
                         </div>
                         <p>The customer is at the heart of our unique business model, which includes design.</p>
                         <a href="#"><img src="img/payment.png" alt=""></a>

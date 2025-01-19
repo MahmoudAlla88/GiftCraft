@@ -356,7 +356,7 @@
     // Login Functionality
     document.getElementById("submit").addEventListener("click", async function (e) {
         e.preventDefault();
-      
+        const firstName = document.getElementById("Firstname").value;
         const userEmail = document.getElementById("userEmail").value;
         const userPassword = document.getElementById("userPassword").value;
      
@@ -366,10 +366,10 @@
         }
 
         try {
-            const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPassword);
+            const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPassword,firstName);
             const user = userCredential.user;
             alert("You have signed in successfully!");
-           
+            alert(`wellcome ${firstName}`)
             window.location.href = "index.html"; // Redirect to home
         } catch (error) {
             alert(`Login failed: ${error.message}`);
@@ -393,8 +393,8 @@
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password,firstName);
             alert("Account created successfully!");
-            alert(`wellcome ${firstName}`)
-            window.location.href = "index.html"; // Redirect to login or home
+            login()
+            // window.location.href = "index.html"; // Redirect to login or home
         } catch (error) {
             alert(`Registration failed: ${error.message}`);
         }
