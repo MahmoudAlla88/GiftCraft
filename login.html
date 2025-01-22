@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="login.css">
     <title>Ludiflex | Login & Registration</title>
 </head>
@@ -361,7 +363,12 @@
         const userPassword = document.getElementById("userPassword").value;
      
         if (!userEmail || !userPassword) {
-            alert("Please fill in all fields.");
+            Swal.fire({
+  title: 'Error!',
+  text: 'Please fill in all fields.',
+  icon: 'warning',
+  confirmButtonText: 'OK'
+});
             return;
         }
 
@@ -411,7 +418,7 @@
     // });
 </script>
 
-// const submit = document.getElementById("submit");
+ const submit = document.getElementById("submit");
 
 //   // Add event listener for the "register" button
 //   submit.addEventListener("click", function (e) {
@@ -478,8 +485,11 @@ submit.addEventListener("click", function (e) {
 });
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <!-- <script type="module">
+
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
     import {
         getAuth,
@@ -576,5 +586,7 @@ submit.addEventListener("click", function (e) {
     // Initial auth state check
     checkAuthState();
 </script> -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
