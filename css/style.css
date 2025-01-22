@@ -646,7 +646,7 @@ ol {
 }
 
 .hero__social {
-	margin-top: 190px;
+	margin-top: 40px;
 }
 
 .hero__social a {
@@ -2047,6 +2047,19 @@ ol {
 
 .footer__copyright__text p a {
 	color: #e53637;
+}
+
+.logo {
+	font-family: Arial, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	padding: 10px;
+	display: inline-block;
+}
+.red-letter {
+	color: red;
 }
 
 /*---------------------
